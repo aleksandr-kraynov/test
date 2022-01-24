@@ -239,6 +239,127 @@ header, footer {
     .item_16 {
         grid-column: 2/4; 
         grid-row: 8/9;
-    }
-  
+    }  
 }
+
+// Frame
+
+.wrapper {
+    background: url(../img/image_frame.png);
+    width: 651px;
+    height: 757px;
+    margin: auto;
+}
+
+.chat-area {
+    overflow-y: scroll;
+    padding: 30px 0 10px;
+    border-bottom: 1px solid #DBDBDB;;
+}
+
+.chat-area__group {
+    padding: 0 24px;
+}
+
+.container-frame {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.container-frame_you {
+    flex-direction: row-reverse;
+    & img {
+        margin-left: 18px;
+    }
+}
+
+.container-frame_me {
+    & img {
+        margin-right: 18px;
+    }
+}
+
+.send,
+.receive {
+    position: relative;
+    display: block;
+    background-color: #F1F3F5;
+    padding: 15px;
+    max-width: 470px;
+    border-radius: 5px;   
+}
+
+.send::after {
+    content: ' '; 
+	position: absolute; 
+	width: 0; 
+	height: 0; 
+	left: -8px; 
+	top: 8px; 
+	border: 5px solid; 
+	border-color: #F1F3F5 #F1F3F5 transparent transparent; 
+}
+
+.receive::before {
+    content: ' '; 
+	position: absolute; 
+	width: 0; 
+	height: 0; 
+	left: 118px; 
+	top: 8px; 
+	border: 5px solid; 
+	border-color: #F1F3F5 transparent transparent #F1F3F5; 
+}
+
+.date {
+    overflow: hidden;
+    text-align: center;   
+    &::before,
+    &::after {
+        content: '';    
+        display: inline-block;   
+        vertical-align: middle;     
+        box-sizing: border-box;      
+        width: 100%;
+        height: 1px;
+        background: #DBDBDB;   
+        margin: 15px;         
+    }
+    &::before {
+        margin-left: -100%; 
+    }
+    &::after {
+        margin-right: -100%;
+    }
+}
+
+.input__area {
+    padding: 20px 24px 30px;
+}
+textarea {
+    width: 590px;
+    height: 129px;
+    padding: 10px;
+    background: #FFFFFF;
+    border: 1px solid #DBDBDB;
+    box-sizing: border-box;
+    border-radius: 4px;
+    resize: none;    
+}
+
+button {
+    width: 144px;
+    height: 41px;
+    margin-top: 20px;
+    padding: 10px 22px;
+    color: #FFFFFF;
+    background: #0F54B9;  
+    border-radius: 21px;
+    border: none;
+    font-size: 16px;
+    line-height: 24px;
+    cursor: pointer;
+}
+
+
